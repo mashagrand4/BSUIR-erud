@@ -1,0 +1,64 @@
+.LP h1{
+	color:black;
+}
+
+.links {
+	padding: 10px 35px;
+}
+
+.links ol li {
+	padding: 10px 0;
+}
+
+.main_word{ 
+	font-size: 13pt;
+	font-style: italic;
+	font-weight: bold;
+}
+.method{
+	font-size: 17pt;
+	font-weight: bold;
+	margin-left: 500px;
+}
+.center{
+	margin-left: 450px;
+}
+.center_big{
+	margin-left: 300px;
+}
+.paragraf{
+	font-size: 14pt;
+	font-style: italic;
+	font-weight: bold;
+
+}
+
+
+.xml_first_row p{
+margin-left: 30px;
+font-style: italic;
+}
+
+.LP{
+	margin:0px 200px 20px 200px;
+}
+.LP ul{
+	margin:0px 200px 20px 200px;
+	height:auto;
+	line-height:normal;
+}
+
+
+.xml_second_row p {
+margin-left: 60px;
+}
+
+.xml_third_row p {
+margin-left: 90px;
+}
+
+.main h1{
+color: black;
+font-weight: bold;
+}
+
