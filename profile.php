@@ -283,7 +283,8 @@ if ($isAdmin) {
             </table>
         </div>
 
-        <canvas id="myChart" width="400" height="400"></canvas>
+        <canvas class="chart" id="myChart1"></canvas>
+        <canvas class="chart" id="myChart2"></canvas>
     <?php else: ?>
         <div class="tests-info">
             <h3>Пройденные вами тесты</h3>
@@ -354,20 +355,68 @@ if ($isAdmin) {
     </div>
     <script>
         window.onload = function() {
-            var ctx = document.getElementById('myChart').getContext('2d');
-            var myChart = new Chart(ctx, {
+            const ctx1 = document.getElementById('myChart1').getContext('2d');
+            const ctx2 = document.getElementById('myChart2').getContext('2d');
+            const myChart1 = new Chart(ctx1, {
                 type: 'line',
                 data: {
-                    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+                    labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w', '8w','9w', '10w', '11w', '12w'],
                     datasets: [{
-                        label: 'apples',
-                        data: [12, 19, 3, 17, 6, 3, 7],
-                        backgroundColor: "rgba(153,255,51,0.6)"
+                        label: 'Петр Петров',
+                        data: [4, 5, 5, 4, 4, 4, 1, 0, 4, 4, 4, 4, 4, 5],
+                        borderColor: "#ff6384",
+                        backgroundColor: "transparent"
                     }, {
-                        label: 'oranges',
-                        data: [2, 29, 5, 5, 2, 3, 10],
-                        backgroundColor: "rgba(255,153,0,0.6)"
+                        label: 'Иван Иванов',
+                        data: [2, 2, 4, 4, 1, 4, 0, 0, 4, 5, 4, 4, 4, 0],
+                        borderColor: "#36a2eb",
+                        backgroundColor: "transparent"
+                    }, {
+                        label: 'Вася Петров',
+                        data: [8, 8, 8, 8, 9, 7, 8, 9, 9, 8, 7, 9, 9, 7],
+                        borderColor: "#ffcd56",
+                        backgroundColor: "transparent"
+                    },
+                    {
+                        label: 'Сергей Сергеев',
+                        data: [9, 10, 8, 7, 10, 9, 7, 10, 9, 9, 8, 7, 9, 9, 10],
+                        borderColor: "#4bc0c0",
+                        backgroundColor: "transparent"
+                    },
+                    {
+                        label: 'Коля Петров',
+                        data: [7, 8, 8, 7, 9, 7, 10, 9, 9, 8, 7, 9, 9, 10],
+                        borderColor: "#9966ff",
+                        backgroundColor: "transparent"
                     }]
+                }
+            });
+            const myChart2 = new Chart(ctx2, {
+                type: 'polarArea',
+                data: {
+                    datasets: [{
+                        data: [
+                            11,
+                            16,
+                            7,
+                            3,
+                            14
+                        ],
+                        backgroundColor: [
+                            "rgba(255, 177, 193, 0.7)",
+                            "rgba(255, 207, 159, 0.7)",
+                            "rgba(68, 149, 204, 0.7)",
+                            "rgba(255, 230, 170, 0.7)",
+                            "rgba(255, 102, 255, 0.7)"
+                        ]
+                    }],
+                    labels: [
+                        "Red",
+                        "Green",
+                        "Yellow",
+                        "Grey",
+                        "Blue"
+                    ]
                 }
             });
         };

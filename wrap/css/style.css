@@ -227,4 +227,11 @@ input {
 	border: 1px solid #bdbdbd
 }
 
+.chart {
+	display: block;
+	max-width: 70%;
+	margin: 0 auto;
+	padding: 10px;
+}
+
 
